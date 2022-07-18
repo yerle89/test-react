@@ -8,7 +8,7 @@ const List = ({cats}: Props) => {
     const renderList = (): JSX.Element[] => {
         return cats.map((cat, index) => {
             return (
-                <li title={'uno'} key={index}>
+                <li key={index}>
                     <h4>{cat.fact}</h4>
                 </li>
             )

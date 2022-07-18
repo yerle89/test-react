@@ -29,7 +29,7 @@ function App() {
 
     return (
         <div className="App">
-            <List  cats={cats}/>
+            <List cats={cats}/>
             <button title={'more facts button'} onClick={refreshPage}> 10 New Facts </button>
         </div>
     );

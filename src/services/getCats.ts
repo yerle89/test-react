@@ -6,5 +6,5 @@ export const getCats = () => {
 
 const fetchCats = () : Promise<CatsFromAPI> => {
     const indexPage = Math.floor(Math.random() * 34)
-    return fetch('https://catfact.ninja/facts?page=1' /*+ indexPage*/).then(res => res.json())
+    return fetch('https://catfact.ninja/facts?page=' + indexPage).then(res => res.json())
 }
