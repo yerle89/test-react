@@ -1,26 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { NavLink, Outlet } from 'react-router-dom';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <header className="header">
+          <h1>Random List of Cats Facts</h1>
+        </header>
+        <div className="body">
+          <nav className="nav">
+            <button title={"home"}> <NavLink to="">Home</NavLink> </button>
+            <button title={"about"}> <NavLink to="about">About Us</NavLink> </button>
+          </nav>
+          <main className="content">
+            <Outlet />
+          </main>
+        </div>
+      </div>
   );
-}
+};
 
 export default App;
